@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm Cafe | Digital Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <nav>
+      <div class="brand">FARM <span>CAFÉ</span></div>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">FRESH • DELICIOUS • MADE WITH LOVE</p>
+      <h1>Good food.<br><em>Good vibes.</em></h1>
+      <p>Welcome to Farm Cafe — scan, choose, and order from your table.</p>
+      <a href="#menu" class="explore-btn">Explore Menu ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="section-tag">OUR DIGITAL MENU</p>
+      <h2>Pick your favourites ✨</h2>
+      <p>Fresh flavours, comforting classics, and something delicious for everyone.</p>
+    </section>
+
+    <div class="category-tabs" id="categoryTabs">
+      <button class="active" data-category="All">All Items</button>
+      <button data-category="Starters">Starters</button>
+      <button data-category="Mains">Mains</button>
+    </div>
+
+    <section id="menu" class="menu-grid"></section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <div><p class="section-tag">YOUR ORDER</p><h2>Your Cart 🛒</h2></div>
+      <button class="close-btn" id="closeCart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button class="checkout-btn" id="checkoutBtn">Place Order on WhatsApp</button>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <div class="checkout-modal" id="checkoutModal">
+    <div class="modal-card">
+      <button class="close-btn modal-close" id="closeModal">×</button>
+      <p class="section-tag">ALMOST DONE</p>
+      <h2>Order Details ☕</h2>
+      <p class="modal-sub">Tell us where to bring your delicious food.</p>
+      <label>Your Name<input id="customerName" placeholder="Enter your name" /></label>
+      <label>Table Number<input id="tableNumber" placeholder="Example: 5" /></label>
+      <label>Special Instructions (optional)<textarea id="instructions" placeholder="Less spicy, no onion, etc."></textarea></label>
+      <button class="whatsapp-btn" id="sendWhatsapp">🟢 Send Order to Farm Cafe</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="brand">FARM <span>CAFÉ</span></div>
+    <p>Scan • Order • Enjoy</p>
+    <small>Digital menu powered by QR technology</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
